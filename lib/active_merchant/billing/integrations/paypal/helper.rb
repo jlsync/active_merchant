@@ -33,6 +33,10 @@ module ActiveMerchant #:nodoc:
             add_field('bn', application_id.to_s.slice(0,32)) unless application_id.blank?
           end
 
+          # add fields needed by subscription button... jason bigname
+          mapping :redirect_cmd, 'redirect_cmd'  # added by jason bigname
+          mapping :rm, 'rm'                      # added by jason bigname
+
           mapping :amount, 'amount'
           mapping :account, 'business'
           mapping :currency, 'currency_code'

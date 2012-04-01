@@ -100,6 +100,18 @@ module ActiveMerchant #:nodoc:
             params['mc_currency']
           end
 
+          # added by Jason jason bigname 
+          # Amount that is deposited into the account’s primary 
+          # balance after a currency conversion 
+          def settle_amount
+            params['settle_amount']
+          end
+
+          # added by Jason jason bigname 
+          def settle_currency
+            params['settle_currency']
+          end
+
           # This is the item number which we submitted to paypal 
           # The custom field is also mapped to item_id because PayPal
           # doesn't return item_number in dispute notifications
